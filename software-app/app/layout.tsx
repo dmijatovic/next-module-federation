@@ -1,7 +1,7 @@
 import './globals.css'
-import { Roboto } from 'next/font/google'
+import {Roboto} from 'next/font/google'
 
-const inter = Roboto({ subsets: ['latin'],weight:['100','300','400','500'] })
+const inter = Roboto({subsets: ['latin'],weight:['100','300','400','500']})
 
 export const metadata = {
   title: 'Software app',
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`flex flex-col ${inter.className}`}>
+      <body className={inter.className}>
         {children}
       </body>
     </html>
