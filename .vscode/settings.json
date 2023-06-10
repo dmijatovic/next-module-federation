@@ -3,6 +3,7 @@
   "eslint.workingDirectories": [
     "./home-app",
     "./software-app",
+    "./rsd-components"
   ],
   // FORMAT ON SAVE for VSC
   // based on this acticle https://www.aleksandrhovhannisyan.com/blog/format-code-on-save-vs-code-eslint/

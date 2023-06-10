@@ -11,15 +11,16 @@ const nextConfig = {
     const nextFolder = isServer ? 'ssr' : 'chunks'
     config.experiments = {
       topLevelAwait: true,
-      layers: true
+      layers:true
     }
     config.plugins.push(
       new NextFederationPlugin({
-        name: 'rsd-home',
-        remotes: {
-          'rsd-components':`rsd-components@http://localhost:3004/_next/static/${nextFolder}/remoteEntry.js`
-        },
-        filename:'static/chunks/primaryEntry.js'
+        name: 'rsd-components',
+        filename: 'static/chunks/primaryEntry.js',
+        exposes: {
+          './card': './components/card',
+          './utils/goBack':'./utils/goBack'
+        }
       })
     )
     return config
